@@ -1,5 +1,8 @@
 #include <stdio.h>
+#include <pthread.h>
 #include "garfos.h"
+
+// Programação concorrente em: Problema do jantar dos filósofos.
 
 pthread_t filosofos[N_FILOSOFOS];
 
@@ -15,7 +18,7 @@ int main(void){
 	for(int i = 0; i < N_FILOSOFOS; ++i)
 		pthread_create(&filosofos[i], NULL, (void *) objetivoFilosofo, (void *) &id_filosofo[i]);
 	
-	// espera threads terminarem
+	// thread main() espera threads terminarem
 	for(int i = 0; i < N_FILOSOFOS; ++i)
 		pthread_join(filosofos[i], NULL);
 	

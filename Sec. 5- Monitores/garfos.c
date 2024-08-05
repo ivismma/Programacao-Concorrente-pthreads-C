@@ -1,4 +1,7 @@
 #include "garfos.h"
+#include <pthread.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 #define esq(f) (((f)+(qtdFilosofos-1))%qtdFilosofos)
 #define dir(f) (((f)+1)%qtdFilosofos)

@@ -1,6 +1,5 @@
-#include <pthread.h>
-#include <stdlib.h>
-#include <unistd.h>
+#ifndef GARFOS_H
+#define GARFOS_H
 
 #define N_FILOSOFOS 5
 
@@ -17,3 +16,5 @@ static void tenta_atender(int fid);
 
 extern int qtdFilosofos;
 extern int *estado_filosofos;
+
+#endif
